@@ -179,7 +179,6 @@ void play(){
     pegar();
     printf("\n\n");
     imprimir();
-    printf("\n");
     if(perdeu == 1){
         printf("\n\tVc perdeu!(You have lost!!)");
     }
