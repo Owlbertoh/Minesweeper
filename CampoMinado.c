@@ -53,7 +53,7 @@ void imprimir(){
         printf("  |");
         for(c=0;c<20;c++){
             if(jogo[l][c].numero == 157 && jogo[l][c].estaaberto == 1)
-                printf("  -%c  ", jogo[l][c].numero);
+                printf("  %c  ", jogo[l][c].numero);
             else if (jogo[l][c].numero != 157 && jogo[l][c].estaaberto == 1)
                 printf(" %2d  ", jogo[l][c].numero);
             else{
@@ -145,10 +145,10 @@ int validar(int x, int y){
 void pegar(){
     int k, m;
     do{
-    printf("\n\n\tDigite a linha e a coluna(write the Bearings): ");
+    printf("\tDigite a linha e a coluna(write the Bearings): ");
     scanf("%d%d", &k, &m);
     if(validar(k, m) == 0){
-        printf("\n\n\tDigite novamente(Invalid bearings)! ");
+        printf("\tDigite novamente(Invalid bearings)! ");
     }
     }while(validar(k, m) == 0);
     if(jogo[k][m].ehbomba == 1){
@@ -177,13 +177,15 @@ int  victory(){
 void play(){
     do{
     pegar();
+    printf("\n\n");
     imprimir();
     if(perdeu == 1){
-        printf("\n\n\tVc perdeu!(You have lost!!)");
+        printf("\n\tVc perdeu!(You have lost!!)");
     }
     else if(victory() == 1){
-        printf("\n\n\tVc Ganhou!(Win!!!) ");
+        printf("\n\tVc Ganhou!(Win!!!) ");
     }
+    printf("\n\n\n");
     }while(victory() == 0 && perdeu == 0);
 }
 
@@ -199,7 +201,7 @@ int main (){
     printf("\n\n");
     //Começar o jogo
     play();
-    printf("\n\n\tDigite 1 para jogar novamente: ");
+    printf("\n\tDigite 1 para jogar novamente: ");
     scanf("%d", &aux);
     }while(aux == 1);
     return 0;
