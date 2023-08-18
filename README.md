@@ -1,2 +1,1 @@
-# Minesweeper
- Just a game in c 
+# MinesWeeper's game
