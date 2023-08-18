@@ -53,7 +53,7 @@ void imprimir(){
         printf("  |");
         for(c=0;c<20;c++){
             if(jogo[l][c].numero == 157 && jogo[l][c].estaaberto == 1)
-                printf("  -%c  ", jogo[l][c].numero);
+                printf("  %c  ", jogo[l][c].numero);
             else if (jogo[l][c].numero != 157 && jogo[l][c].estaaberto == 1)
                 printf(" %2d  ", jogo[l][c].numero);
             else{
